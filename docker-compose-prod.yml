@@ -1,6 +1,6 @@
 services:
   app:
-    build: .
+    image: chatty-be2:latest
     ports:
       - "${PORT}:${PORT}"
     environment:

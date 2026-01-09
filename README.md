@@ -7,7 +7,20 @@
 -   **JWT (JSON Web Token)**: 사용자 정보와 프로젝트 ID를 담고 있는 암호화된 토큰입니다. Host가 발급하고 Chat 서버가 검증합니다.
 -   **Socket.IO**: 실시간 양방향 통신을 담당하는 프로토콜입니다.
 
-## 2. 전체 인증 및 연결 플로우 (Sequence Diagram)
+## 2. 환경 변수 설정 (.env)
+프로젝트 루트에 `.env` 파일을 생성하여 다음 변수들을 설정해야 합니다.
+
+```env
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=postgres
+POSTGRES_DB=chatty
+DB_HOST=db
+DB_PORT=5432
+JWT_SECRET=your-secret-key-shared-with-host
+PORT=3000
+```
+
+## 3. 전체 인증 및 연결 플로우 (Sequence Diagram)
 
 ```mermaid
 sequenceDiagram
