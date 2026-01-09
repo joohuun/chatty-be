@@ -114,13 +114,4 @@ const socket = io('SERVER_URL', {
 "보낼 메시지 내용"
 ```
 
----
 
-## 4. 데이터베이스 및 보존
--   **Engine**: PostgreSQL (Docker Container)
--   **Table**: `messages`
--   **보존 정책**: `docker-compose.yml`에 정의된 `pgdata` 볼륨을 통해 데이터가 영구 보존됩니다. 컨테이너를 삭제해도 볼륨이 남아있으면 데이터는 유지됩니다.
--   **데이터 초기화**:
-    ```bash
-    docker-compose down -v  # 볼륨까지 함께 삭제하여 초기화
-    ```
